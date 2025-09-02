@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { copyToClipboard } from '@/utils/clipboard';
 
 const ApiKeyForm = ({ 
@@ -11,9 +11,24 @@ const ApiKeyForm = ({
   submitting 
 }) => {
   const [formData, setFormData] = useState({
-    name: editingKey?.name || '',
-    description: editingKey?.description || ''
+    name: '',
+    description: ''
   });
+
+  // Update form data when editingKey changes
+  useEffect(() => {
+    if (editingKey) {
+      setFormData({
+        name: editingKey.name || '',
+        description: editingKey.description || ''
+      });
+    } else {
+      setFormData({
+        name: '',
+        description: ''
+      });
+    }
+  }, [editingKey]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
