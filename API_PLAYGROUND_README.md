@@ -73,7 +73,6 @@ Validates submitted API keys.
   "user": {
     "id": "user-123",
     "name": "Demo User",
-    "accessLevel": "full",
     "validatedAt": "2024-01-01T00:00:00.000Z"
   }
 }
@@ -100,7 +99,6 @@ Checks if the user is authenticated.
   "user": {
     "id": "user-123",
     "name": "Demo User",
-    "accessLevel": "full",
     "lastSeen": "2024-01-01T00:00:00.000Z"
   }
 }

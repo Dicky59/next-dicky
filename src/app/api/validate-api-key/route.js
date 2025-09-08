@@ -39,7 +39,6 @@ export async function POST(request) {
       user: {
         id: data.id,
         name: data.name || 'API User',
-        accessLevel: 'full',
         validatedAt: new Date().toISOString(),
         apiKeyName: data.name,
         description: data.description
