@@ -11,7 +11,7 @@ const SummarySchema = z.object({
 // Initialize the LLM
 const llm = new ChatOpenAI({
   model: "gpt-3.5-turbo",
-  temperature: 0.3,
+  temperature: 0,
 });
 
 // Create the structured LLM with output parsing
